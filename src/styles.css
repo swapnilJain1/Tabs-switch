@@ -1,0 +1,87 @@
+button {
+  width: 130px;
+  padding: 10px;
+  border: none;
+  border-left: 5px solid orange;
+  background-color: lightgrey;
+  margin: 5px 3px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 7px;
+}
+h4 {
+  padding-top: 12px;
+  margin-bottom: -3px;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  min-width: 250px;
+}
+.app-button {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+.tab-data {
+  max-width: 300px;
+  text-align: left;
+  text-align: justify;
+  margin-left: 13px;
+  margin-top: -22px;
+  display: none;
+  background-color: burlywood;
+  padding: 0 16px 1px;
+  font-size: 17px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.continer {
+  display: flex;
+  height: 100vh;
+  margin-top: 70px;
+  justify-content: center;
+}
+.active {
+  background-color: blue;
+  color: white;
+  border-left: 5px solid blue;
+  position: relative;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent blue;
+}
+.show {
+  display: block;
+}
+@media screen and (max-width: 450px) {
+  .continer {
+    display: flex;
+    flex-direction: column;
+    margin-top: -80px;
+  }
+  .app-button {
+    display: flex;
+    flex-direction: row;
+    max-width: 330px;
+    margin-bottom: 10px;
+  }
+  .active::after {
+    content: "";
+    position: absolute;
+    top: 58%;
+    right: 40px;
+    transform: translateY(90%) rotate(90deg);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent blue;
+  }
+}
